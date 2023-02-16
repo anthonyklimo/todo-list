@@ -1,0 +1,154 @@
+:root {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    --light-blue: #B9F3FC;
+    --blue: #AEE2FF;
+    --dark-blue: #93C6E7;
+    --pink: #FEDEFF;
+}
+
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+#page-header {
+    height: 80px;
+    width: calc(100vw - 40px);
+
+    font-size: 64px;
+    font-weight: 500;
+    background-color: var(--blue);
+
+    padding: 20px;
+
+}
+
+#main {
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 120px);
+}
+
+#nav {
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    background-color: var(--dark-blue);
+
+    padding-left: 20px;
+    padding-top: 20px;
+
+    gap: 20px;
+}
+
+#nav button {
+    width: 100px;
+    height: 30px;
+
+    background-color: var(--pink);
+
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 200px);
+    background-color: var(--light-blue);
+}
+
+#home {
+    font-size: 32px;
+}
+
+#projects {
+    font-size: 32px;
+
+}
+#add-project {
+}
+
+#modal {
+    display: flex;
+    flex-direction: column;
+    background-color: azure;
+    width: 250px;
+    height: max-content;
+    margin-top: 50px;
+    padding: 20px 40px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px grey;
+
+    position: fixed;
+    top: 30vh;
+    left: 0;
+    right: 0;
+    margin-left: calc(50% - 90px);
+    margin-right: auto; 
+    z-index: 1;    
+
+    scale: 0;
+}
+
+#modal.active {
+    scale: 1;
+}
+
+
+#name, #desc {
+    width: 250px;
+}
+
+#desc {
+    height: 2em;
+    overflow: auto;
+}
+
+li {
+    list-style: none;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 20px;
+}
+
+.modal-buttons > * {
+    height: 30px;
+    width: 100px;
+
+    border: 1px solid var(--dark-blue);
+    border-radius: 5px;
+}
+
+#add-btn {
+    background-color: rgb(63, 255, 162);
+}
+
+#cancel-btn {
+    background-color: rgb(253, 142, 200);
+}
+
+#todo-list {
+    margin-top: 40px;
+}
+
+#todo-list > * {
+    display: flex;
+    width: 450px;
+    margin-top: 20px;
+    background-color: azure;
+}
+
+#todo-list > * > * {
+    width: 150px;
+    word-wrap: break-word;
+    
+}
+
+
+
