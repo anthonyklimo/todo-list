@@ -4,10 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="bundle.js" defer></script>
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
+
 </head>
 <body>
-    <script src="main.js"></script>
+    <header id="page-header">Todo List</header>
+    <div id="main">
+        <div id="nav">
+            <div id="home">
+                <div class="title">Home</div>
+                <button id="new-home-item">+ Item</button>
+            </div>
+            <div id="projects">
+                <div class="title">Projects</div>
+                <button id="new-project">+ Project</div>
+            </div>
+
+        <div id="content">
+            <div class="add-item-modal active">
+                <ul>
+                    <li><label for="name">Name:</label></li>
+                    <li><input type="text" name="name" id="name" required></li>
+                </ul>
+                <ul>
+                    <li><label for="desc">Description:</label></li>
+                    <li>
+                        <textarea type="text" name="desc" id="desc"></textarea>
+                    </li>
+                </ul>
+                <ul>
+                    <li><label for="date">Date:</label></li>
+                    <li><input type="date" name="date" id="date"></li>
+                </ul>
+                <div class="modal-buttons">
+                    <button id="add-btn">Add</button>
+                    <button id="cancel-btn">Cancel</button>
+
+                </div>
+            
+
+        </div>
+        <div id="todo-list">
+
+        </div>
+
+    </div>
+    
     
 </body>
 </html>
