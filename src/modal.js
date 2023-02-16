@@ -2,13 +2,11 @@ function getItemInfo() {
   const name = document.getElementById('name').value;
   const desc = document.getElementById('desc').value;
   const date = document.getElementById('date').value;
-
   const item = {
     name,
     desc,
     date,
   };
-
   return (item);
 }
 
@@ -30,6 +28,7 @@ function createItemElement(item) {
 
   todoList.appendChild(listItem);
 }
+
 function clearInput() {
   const inputName = document.getElementById('name');
   const inputDesc = document.getElementById('desc');
@@ -40,14 +39,33 @@ function clearInput() {
   inputDate.value = '';
 }
 
+function closeModal() {
+  const modal = document.getElementById('modal');
+  modal.classList.remove('active');
+}
+
 function addItem() {
   const btnAdd = document.getElementById('add-btn');
+  const name = document.getElementById('name');
+
   btnAdd.addEventListener('click', () => {
+    if (name.value === '') {
+      return;
+    }
     createItemElement(getItemInfo());
     clearInput();
-    console.log('hello');
-    console.log(getItemInfo());
+    closeModal();
   });
 }
 
-export { createItemElement, getItemInfo, addItem };
+function cancelItem() {
+  const btnCancel = document.getElementById('cancel-btn');
+  btnCancel.addEventListener('click', () => {
+    clearInput();
+    closeModal();
+  });
+}
+
+export {
+  createItemElement, getItemInfo, addItem, cancelItem,
+};
