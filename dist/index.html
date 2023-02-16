@@ -15,43 +15,56 @@
         <div id="nav">
             <div id="home">
                 <div class="title">Home</div>
-                <button id="new-home-item">+ Item</button>
+                <button id="create-new-item">New Item</button>
             </div>
             <div id="projects">
                 <div class="title">Projects</div>
-                <button id="new-project">+ Project</div>
+                <div id="project-list"></div>
+                
+                <button id="create-new-project">New Project</button>
+                    <!-- <div class="project-modal active" id="project-modal">
+                        <form id="form">
+                            <ul>
+                                <li><label for="name">Name:</label></li>
+                                <li><input type="text" name="name" id="project-name"></li>
+                            </ul>
+                            <div class="modal-buttons">
+                                <button type="submit">Add</button>
+                                <button>Cancel</button>
+                            </div>
+                        </form>
+                    </div> -->
             </div>
-
+        </div>
         <div id="content">
-            <div class="add-item-modal active">
-                <ul>
-                    <li><label for="name">Name:</label></li>
-                    <li><input type="text" name="name" id="name" required></li>
-                </ul>
-                <ul>
-                    <li><label for="desc">Description:</label></li>
-                    <li>
-                        <textarea type="text" name="desc" id="desc"></textarea>
-                    </li>
-                </ul>
-                <ul>
-                    <li><label for="date">Date:</label></li>
-                    <li><input type="date" name="date" id="date"></li>
-                </ul>
-                <div class="modal-buttons">
-                    <button id="add-btn">Add</button>
-                    <button id="cancel-btn">Cancel</button>
+            <div class="modal" id="modal">
+                <form id="form">
 
-                </div>
-            
+                    <ul>
+                        <li><label for="name">Name:</label></li>
+                        <li><input type="text" name="name" id="name" required></li>
+                    </ul>
+                    <ul>
+                        <li><label for="desc">Description:</label></li>
+                        <li>
+                            <textarea type="text" name="desc" id="desc"></textarea>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li><label for="date">Date:</label></li>
+                        <li><input type="date" name="date" id="date"></li>
+                    </ul>
 
+                    <div class="modal-buttons">
+                        <button type="submit" id="add-btn">Add</button>
+                        <button id="cancel-btn">Cancel</button>
+                    </div>
+
+                </form>
+            </div>
+            <div id="todo-list"></div>
         </div>
-        <div id="todo-list">
-
-        </div>
-
     </div>
-    
     
 </body>
 </html>
