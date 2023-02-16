@@ -1,3 +1,11 @@
-import './style.css';
+import {
+  getItemInfo, createItemElement, addItem, cancelItem,
+} from './modal';
 
-const balls = 'bl';
+import button from './nav';
+
+button();
+
+addItem();
+
+cancelItem();
